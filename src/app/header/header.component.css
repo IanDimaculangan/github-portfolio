@@ -1,0 +1,67 @@
+/* Main header container layout */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Logo on left, nav on right */
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #000;
+  flex-wrap: wrap; /* Allows elements to stack on smaller screens */
+}
+
+/* Logo image styles */
+.header-leftside img {
+  height: 70px;
+
+}
+
+/* Nav container - default: show on desktop */
+.header-rightside {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Each nav item styling */
+.nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+/* Hamburger menu - hidden on desktop */
+.hamburger {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 32px; 
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Query: Mobile Screens */
+@media (max-width: 768px) {
+  /* Hide nav menu by default on mobile */
+  .header-rightside {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Show nav menu when class 'open' is applied */
+  .header-rightside.open {
+    display: flex;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
+}

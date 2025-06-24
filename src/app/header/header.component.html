@@ -1,0 +1,22 @@
+<header class="header-container">
+  <!-- Left Side: Logo -->
+  <div class="header-leftside">
+    <img src="assets/riadtransparent.png" alt="RIAD Profile logo" />
+  </div>
+
+  <!-- HAMBURGER BUTTON for small screens -->
+  <!-- (click)="toggleMenu()" calls the function in the component to toggle nav visibility -->
+  <button class="hamburger" (click)="toggleMenu()">
+    <mat-icon>view_list</mat-icon>
+  </button>
+
+  <!-- NAVIGATION MENU -->
+  <!-- It will be hidden by default on small screens, and shown when 'menuOpen' is true -->
+  <!-- The class 'open' is dynamically added if menuOpen is true -->
+  <nav class="header-rightside" [class.open]="menuOpen">
+    <a [routerLink]="['/']" fragment="home" class="nav-link">Home</a>
+    <a [routerLink]="['/']" fragment="project-container" class="nav-link">Projects & Skills</a>
+    <a [routerLink]="['/']" fragment="certificationstitle" class="nav-link">Certifications</a>
+    <a [routerLink]="['/']" fragment="contactme-container" class="nav-link">Contact Me</a>
+  </nav>
+</header>

@@ -1,0 +1,151 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container" style="background-image: url('assets/Background.png');" id="home">
+
+    <div class="left-column">
+      <h1><mat-icon> local_cafe</mat-icon>Rob Ian Dimaculangan</h1>
+      <h2><mat-icon> local_cafe</mat-icon>Front-End Web Developer</h2>
+        <p>Hi I'm Rob Ian Dimaculangan, A Starting Front-End Web Developer based on the Philippines Graduated 
+          from De La Salle Lipa University in Bachelor of Science in Computer Science Living in Lipa City, Batangas focused on enhancing
+          my Skills and Experience Creating mutual benefits for a long-term relationship with a company pursuant to growth and development.
+        </p>
+      <mat-list class="customlist">  
+            <mat-list-item><p><mat-icon>whatshot</mat-icon>Wordpress</p></mat-list-item>
+            <mat-list-item><p><mat-icon>whatshot</mat-icon>Figma & Wireframe</p></mat-list-item>
+            <mat-list-item><p><mat-icon>whatshot</mat-icon>Html, CSS, and Angular Framework </p></mat-list-item>    
+        </mat-list>
+        <hr>
+        <div id="contactcontainer">
+          <p>Want to reach Out?</p>
+            <a href="assets/Dimaculangan_Resume.pdf" download="Dimaculangan_Resume" >
+              <button type="button" id="download-btn">Here's My Resume</button>
+            </a>
+        </div>
+    </div>
+        <!-- social media buttons -->
+    <div class="right-column">
+        <img src="assets/mee.png" alt="My Profile Picture" id="profile-image">
+        <div id="social-media-icons">
+          <a href="https://www.facebook.com/robian.dimaculangan/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/fb.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com/in/robiadimaculangan/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LI.png" alt="LinkedIn" class="social-icon">
+          </a>
+          <a href="https://github.com/IanDimaculangan" target="_blank" rel="noopener noreferrer">
+            <img src="assets/gh.png" alt="GitHub" class="social-icon">
+          </a>
+        </div>
+    </div>
+</div>
+
+
+<section id="project-container">
+  <h1 id="PSheader">Projects & Skills</h1>
+  <div id="projectmain-container">
+    
+    <div id="leftproject">
+      <div class="projects" *ngFor="let project of projects" (click)="selectProject(project)">
+        {{ project.title }}
+      </div>
+    </div>  
+    
+    <div class="rightproject">
+      <h2><mat-icon>developer_board</mat-icon>{{ selectedProject.title }}</h2><hr>
+      <p>{{ selectedProject.description }}</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+  
+<section id="Certifications-container" style="background-image: url('assets/Background.png');">
+  <h1 id="certificationstitle">Certifications</h1>
+  <div id="card-containers">
+
+    <div class="blog-card">
+      <a href="https://www.certmetrics.com/comptia/public/verification.aspx/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/download.png" alt="Mistake Image" class="blog-image" />
+      </a>
+      <div class="blog-content">
+        <p class="blog-meta">Comptia.org • Jan 5, 2024</p>
+        <h2 class="blog-title">COMPTIA Cloud Essentials+ Credential ID: COMP001022431181</h2>
+        <p class="blog-description">
+          CompTIA Cloud Essentials+ will certify the successful candidate has the knowledge and skills required to make
+          clear and conscious decisions about cloud technologies and their business impact by evaluating business use
+          cases, financial impacts, cloud technologies, and deployment models with knowledge of cloud computing.
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <a href="assets/angular.pdf" target="_blank" rel="noopener noreferrer">
+      <img src="assets/angular.jpg" alt="Mistake Image" class="blog-image" />
+      </a>
+      <div class="blog-content">
+        <p class="blog-meta">Sololearn • Feb 24, 2024</p>
+        <h2 class="blog-title">Angular Framework</h2>
+        <p class="blog-description">
+          Introductory course on Angular Framework provided by Sololearn to those who wanna learn Angular, covering the basics of building web applications with Angular.
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <a href="https://www.credly.com/badges/83254ca0-a5e1-485e-bf9c-6481652c892d/linked_in_profile" target="_blank">
+        <img src="assets/WDF.png" alt="Web Development Fundamentals Badge" class="blog-image">
+      </a>      
+  
+      <div class="blog-content">
+        <p class="blog-meta">IBM Skillsbuild • May 6, 2025</p>
+        <h2 class="blog-title">Web Development Fundamentals</h2>
+        <p class="blog-description">
+          This course covers the foundational concepts & History of web development, including HTML, CSS, and JavaScript.
+        </p>
+      </div>
+    </div>
+
+        <div class="blog-card">
+      <a href="" target="_blank">
+        <img src="assets/CSA1.png" alt="Certified Security Awareness 1" class="blog-image">
+      </a>      
+  
+      <div class="blog-content">
+        <p class="blog-meta">Mile2 • Oct  2023</p>
+        <h2 class="blog-title">CSA1: Certified Security Awareness 1</h2>
+        <p class="blog-description">
+        Teaches general security threats inherent to today's workplace as well as the countermeasures asssociated with these to develop a strong security culture within your company's community
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section id="contact-section">
+  <div id="contactme-container">
+    <h1 id="contactmeheader">Have an Inquiry? Contact Me!</h1>
+    <p class="contact-description">
+      If you want to know more about me, you can reach out via my social media above or contact me through my mobile number or email below.
+    </p><hr style="color: black; margin: 50px 0px;">
+  </div>
+
+  <div id="contact-info-container">
+    <div class="contact-details">
+      <h3>Mobile Number</h3>
+      <p><mat-icon> contact_phone</mat-icon> 0917 563 6621</p>
+    </div>
+
+    <div class="contact-details">
+      <h3>Email</h3>
+      <p>	<mat-icon> contact_mail</mat-icon> robiadimaculangan&#64;gmail.com</p>
+    </div>
+  </div>
+</section>
