@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/github-portfolio",
             "index": "src/index.html",
+            "baseHref": "/github-portfolio/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
